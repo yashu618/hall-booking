@@ -17,6 +17,13 @@ def about(request):
 def contact(request):
 	return render(request,'html/contact.html')
 
+def admin(request):
+	if request.method == "POST":
+		p= usrg(request.POST)
+		if p.is_valid():
+			p.save()
+			return redirect('/admin')
+
 def register(request):
 	if request.method == "POST":
 		p = Usrg(request.POST)

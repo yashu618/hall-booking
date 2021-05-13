@@ -8,6 +8,7 @@ urlpatterns = [
 	path('cnt/',views.contact,name="cn"),
 	path('reg/',views.register,name="rg"),
 	path('dashboard/',views.dashboard,name="dsh"),
+	path('admin/',views.admin,name="admn"),
 	path('login/',v.LoginView.as_view(template_name="html/login.html"),name="lg"),
 	path('logout/',v.LogoutView.as_view(template_name="html/logout.html"),name="lgo"),
 	path('pfle/',views.prfle,name="pf"),
