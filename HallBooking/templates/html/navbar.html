@@ -39,7 +39,7 @@
       {% else %}
       <li class="dropdown">
       <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown">
-         <img src="{% static 'img/blog-author.jpg' %}" height="33px" width="35px" class="rounded-circle" />  {{user.username}} 
+         <img src="{{user.updf.im.url}}" height="33px" width="35px" class="rounded-circle" />  {{user.username}} 
        </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="{% url 'pf' %}">Profile</a>
