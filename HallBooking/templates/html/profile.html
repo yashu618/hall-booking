@@ -6,15 +6,14 @@
 	{% if messages %}
 	{% for j in messages %}
 	<div class="alert alert-{{j.tags}} alert-dismissible mt-2">
-  		<button type="button" class="close" data-dismiss="alert">&times;</button><img src="{% static 'img/blog-1.jpg' %}" class="rounded-circle" height="40px" width="50px"/>
-  		{{j}}
+	<button type="button" class="close" data-dismiss="alert">&times;</button><img src="{% static 'img/updf.jpg' %}" class="rounded-circle" height="40px" width="50px"/>{{j}}
 	</div>
 	{% endfor %}
 	{% endif %}
 	<div class="row mt-3 mx-3">
 		<div class="col-md-3 h-100">
 			<div class="card border-info">
-				<img src="{% static 'img/blog-author.jpg' %}" class="card-img-top rounded" height="230px" width="100%"/>
+				<img src="{{user.updf.im.url}}" class="card-img-top rounded" height="230px" width="100%"/>
 				<div class="card-footer">
 					<h2 class="bg-info text-center text-white border rounded p-2">Hi, {{user.username}}</h2>
 				</div>

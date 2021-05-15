@@ -119,7 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = "/Images/"
+MEDIA_URL = "/images/"
 MEDIA_ROOT = os.path.join(BASE_DIR,'HallBooking/static/images')
 LOGIN_URL = 'lg'
 LOGIN_REDIRECT_URL ='book'
