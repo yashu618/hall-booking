@@ -13,7 +13,9 @@ urlpatterns = [
 	path('logout/',v.LogoutView.as_view(template_name="html/logout.html"),name="lgo"),
 	path('pfle/',views.prfle,name="pf"),
 	path('updf/',views.updfple,name="upf"),
+	path('add/',views.addhotel,name="adh"),
+	path('updh/',views.updatehotel,name="uph"),
 	path('bkn/',views.booknow,name="book"),
-
+	
 
 ]

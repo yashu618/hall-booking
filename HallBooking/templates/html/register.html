@@ -2,9 +2,9 @@
 {% block title %}Index{% endblock %}
 {% block content %}
 <div class="container">
-  <div class="card shadow-lg col-md-5 mx-auto mt-5">
+  <div class="card  col-md-6 mt-4 mx-auto bg-info shadow-lg">
     <div class="card-body">
-      <h2 class="my-2">Registration</h2>
+      <h2 class="text-white p-3 text-center border-rounded">Registration</h2>
       <form method="post">
       {% csrf_token %}
     <!-- <table class="table table-borderless"> -->
@@ -14,7 +14,7 @@
       <!-- </tr> -->
       {% endfor %}
     <!-- </table> -->
-    <input type="submit" class="btn btn-block btn-primary my-2 p-2" value="Subscribe">
+    <input type="submit" class="form-control btn btn-success btn-block my-2" value="Submit">
     </form>
     </div>
   </div>

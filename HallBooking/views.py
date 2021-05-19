@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from . forms import Usrg,UpdaPfl,Im
+from . forms import Usrg,UpdaPfl,Im,addhotel,updatehotel
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -67,6 +67,22 @@ def updfple(request):
 @login_required
 def booknow(request):
 	return render(request,'html/booking.html')
+@login_required
+def addhotel(request):
+	return render(request,'html/addhotel.html')
+
+def updatehotel(request):
+	if request.method == "POST":
+		m = UpdaPfl(request.POST,instance=request.user)
+		n = Im(request.POST,request.FILES,instance=request.user.updf)
+		if m.is_valid() and n.is_valid():
+			m.save()
+			n.save()
+			messages.success(request,"hotel updated Successfully")
+			return redirect('/add')
+	m = UpdaPfl(instance=request.user)
+	n = Im(instance=request.user.updf)
+	return render(request,'html/updatehotel.html',{'p':m,'r':n})
 
 
 
